@@ -4,10 +4,27 @@
   "name": "avespfade_proxy_extension",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Oversynctero"
+    "default_title": "avespfade_proxy_extension"
   },
-  "permissions": ["activeTab", "scripting"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "Tile Redirect",
+        "enabled": true,
+        "path": "tile_redirect.json"
+      }
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webRequest",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": ["*://*.avespfade.de/*"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "proxyWorker.js"
   }
 }
