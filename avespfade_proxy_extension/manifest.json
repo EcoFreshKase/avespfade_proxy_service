@@ -15,16 +15,6 @@
       }
     ]
   },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "webRequest",
-    "declarativeNetRequest",
-    "declarativeNetRequestWithHostAccess",
-    "declarativeNetRequestFeedback"
-  ],
-  "host_permissions": ["*://*.avespfade.de/*"],
-  "background": {
-    "service_worker": "proxyWorker.js"
-  }
+  "permissions": ["scripting", "declarativeNetRequest"],
+  "host_permissions": ["*://*.avespfade.de/*"]
 }
