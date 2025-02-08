@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 #[tokio::main]
 async fn main() {
     // Define the directory to serve files from
